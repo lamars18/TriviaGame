@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>80s Trivia Game Using jQuery</title>
+<meta name="robots" content="noindex, nofollow">
+<!-- Include CSS File Here -->
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+
+<style>
+html {
+  background-image: url("assets/images/eightysbackground.jpg");
+}
+
+</style>
+</head>
+<body>
+  <div id="SplashScreen">
+    <div class="transbox">
+    <h1>LET'S PLAY SOME 80s TRIVIA</h1>
+    <h6>CLICK A BUTTON BELOW TO START THE TRIVIA BASIC OR TRIVIA FUN MODE</h6>
+    <input type="button" name="start" id="start" value="START TRIVIA BASIC">
+    <BR>
+    <input type="button" name="start2" id="start2" value="START TRIVIA FUN">
+    </div>
+  </div>
+  
+  
+  <div class="background">
+  <div class="transbox2"> <!--style="display:none;"!-->
+  <section>
+    <div id="results"></div>
+    <form name= "quizForm" class="form" onsubmit="return submitAnswers()">
+      <h2>Totally 80s Trivia!</h2>
+      <h2><div>Time Remaining:<br> <span id="time"> </span> minutes</div></h2>
+      <label>Question 1:</label>
+      <!--<form action="Select">-->
+      <p>What type of Business did George Jefferson own in the show the Jeffersons?</p><br>
+        A: A Nightclub<input type="radio" name="q1" value="q1a"><br>
+        B: A Dry Cleaners<input type="radio" name="q1" value="q1b"><br>
+        C: A Car Wash<input type="radio" name="q1" value="q1c"><br>
+        D: A Car Dealership<input type="radio" name="q1" value="q1d"><br>
+        <!--<input type="submit">-->
+  
+        <br>
+        <label>Question 2:</label>
+        <!--<form action="Select">-->
+        <p>What was the name of Jaleel White's alterego in the show Family Matters?</p><br>
+        A: Bruce Lee<input type="radio" name="q2" value="q2a"><br>
+        B: Buddy Love<input type="radio" name="q2" value="q2b"><br>
+        C: Supa Fly<input type="radio" name="q2" value="q2c"><br>
+        D: Stefhon Urquelle <input type="radio" name="q2" value="q2d"><br>
+        <!--<input type="submit">-->
+    
+        <br>
+        <label>Question 3:</label>
+        <!--<form action="Select">-->
+        <p>What was Kim Field's characters name on The Facts of Life?</p><br>
+        A: Tootie<input type="radio" name="q3" value="q3a"><br>
+        B: Nat<input type="radio" name="q3" value="q3b"><br>
+        C: Jo <input type="radio" name="q3" value="q3c"><br>
+        D: Blair<input type="radio" name="q3" value="q3d"><br>
+        <!--<input type="submit">-->
+    
+        <br>
+        <label>Question 4:</label>
+        <!--<form action="Select">-->
+        <p>What was J.J.'s nickname in the sitcom Goodtimes?</p><br>
+          A: Buster<input type="radio" name="q4" value="q4a"><br>
+          B: Boy Wonder<input type="radio" name="q4" value="q4b"><br>
+          C: Kid Dynomite<input type="radio" name="q4" value="q4c"><br>
+          D: Peanut<input type="radio" name="q4" value="q4d"><br>
+          <!--<input type="submit">-->
+    
+        <br>
+        <label>Question 5:</label>
+        <!--<form action="Select">-->
+        <p>What was the name of Roger's bratty sister in the show What's Happening?</p><br>
+           A: Tee Tee<input type="radio" name="q5" value="q5a"><br>
+           B: Nicole<input type="radio" name="q5" value="q5b"><br>
+           C: Dee<input type="radio" name="q5" value="q5c"><br>
+           D: Becky<input type="radio" name="q5" value="q5d"><br>
+           <!--<input type="submit">-->
+
+           <br>
+          </p>
+          <input type="submit" name="done" id="done" value="Submit Answers">
+    </form>
+    </section>
+    
+
+
+<!-- Include JS Files Here -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/javascript/Trivia.js"></script>
+</body>
+</html>
