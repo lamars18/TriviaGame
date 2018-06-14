@@ -20,22 +20,24 @@ $(".transbox2").attr("style", "display:none");
 //Sets the timer for the game
 
 function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+    
+    var newTimer = setInterval(function () {
+    var minutes = parseInt(duration / 60, 10)
+    var seconds = parseInt(duration % 60, 10);
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 1) {
-            clearTimeout(timer);
-            element.innerHTML = "<h2>TIME IS UP! </h2>";
-           }
+        if (--duration < 0) {
+            clearInterval(newTimer);
+            alert("YOU ARE OUT OF TIME!");
+            submitAnswers();
+            $("#SplashScreen").attr("style", "display:block");
+            $(".transbox2").attr("style", "display:none");
+            }
     }, 1000);
-    
     
    
        
@@ -138,41 +140,58 @@ function submitAnswers(){
 
 //Adds to Score based on answers
 
-if(q1 == answers[0]){
+if(q1 === answers[0]){
     score++;
     correct++;
 }
-if(q2 == answers[1]){
+if(q2 === answers[1]){
     score++;
     correct++;
 }
-if(q3 == answers[2]){
+if(q3 === answers[2]){
     score++;
     correct++;
 }
-if(q4 == answers[3]){
+if(q4 === answers[3]){
    score++;
    correct++;
 }
-if(q5 == answers[4]){
+if(q5 === answers[4]){
     score++;
     correct++;
 }
-if(q1 != answers[0]){
+if(q1 !== answers[0] && q1){
     incorrect++;
 }
-if(q2 != answers[1] ){
+if(q2 !== answers[1] && q2){
     incorrect++;
 }
-if(q3 != answers[2] ){
+if(q3 !== answers[2] && q3){
     incorrect++;
 }
-if(q4 != answers[3] ){
+if(q4 !== answers[3] && q4){
     incorrect++;
 }
-if(q5 != answers[4] ){
+if(q5 !== answers[4] && q5){
     incorrect++;
 }
+//IF the variable is false. Does the variable have value or not. 
+if(!q1){
+    unanswered++;
+}
+if(!q2){
+    unanswered++;
+}
+if(!q3){
+    unanswered++;
+}
+if(!q4){
+    unanswered++;
+}
+if(!q5){
+    unanswered++;
+}
+console.log(q1,q2,q3,q4,q5);
 
 alert("You scored" + " " + score + " " + "out of" + " " + total + " " +
 "You answered" + " " + correct + " " + "CORRECT" + " " + incorrect + " " + "INCORRECT" + " " +
